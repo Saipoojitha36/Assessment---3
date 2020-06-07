@@ -1,17 +1,3 @@
----
-title: "Assessment-3 Part 1" 
-author: "Saipoojitha" 
-output: html_document 
-theme: cosmo 
----
-  
-### Heading number 1 - download the file and read into R
-  Here we are using the command 'download.file()' to obtain the data stored in the file 'gene_expression.tsv'
-then we are reading the file into R. To import the data properly we have to use the commands 'header = TRUE',
-and 'row.names = 1'.
-
-``` {r, chunk1, echo=TRUE}
-#### Download data
 
 # Question 1 - A) Downloading the date in the file "gene_expression.tsv"
 
@@ -22,16 +8,8 @@ download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master
 a <- read.table("gene_expression.tsv")
 head(a)
 a <- read.table("gene_expression.tsv", header = TRUE, stringsAsFactors = FALSE, row.names = 1)
-```
-
-#### Checking whether the data has integrated properly
-Here we use two commands, 'head()' command to check whether the required data has been integrated
-and 'str()' command to check the data structure
-
-```{r, chunk2, echo = TRUE}
 head(a)
 str(a)
-```
 
 
 #Question 2 - Making mean the other column and showing the values of first six genes
@@ -66,8 +44,6 @@ download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master
 
  #read table into R-script and specify columns names of data
 b <- read.csv("growth_data.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE )
-'''
-#Heading 
 head(b)
 str(b)
 colnames(b)
